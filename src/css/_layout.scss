@@ -11,3 +11,21 @@ header .container {
     align-items: center;
     height: 100px;
 }
+
+header nav {
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        padding: 1rem 0.5rem;
+    }
+}
