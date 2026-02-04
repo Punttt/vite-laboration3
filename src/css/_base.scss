@@ -24,4 +24,11 @@ $dark-theme: (
 // Globala
 body {
     font-family: "Poppins", sans-serif;
+    background-color: theme($light-theme,background );
+    color: theme($light-theme,font );
+}
+
+body.dark {
+    background-color: theme($dark-theme,background );
+    color: theme($dark-theme,font );
 }
