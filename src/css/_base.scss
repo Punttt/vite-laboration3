@@ -40,12 +40,18 @@ body.dark {
 nav a {
     color: theme($light-theme, font);
 }
+nav a.active {
+    color: theme($light-theme, accent);
+}
 nav a:hover {
     opacity: 0.7;
 }
 // dark theme 
 body.dark nav a{
     color: theme($dark-theme, font);
+}
+body.dark nav a.active{
+    color: theme($dark-theme, accent);
 }
 
 // Buttons 
