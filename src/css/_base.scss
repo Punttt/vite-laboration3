@@ -16,6 +16,11 @@ $dark-theme: (
     border:#B4B4B4
 );
 
+// Tema funktion
+@function theme($theme, $key){
+    @return map-get($theme, $key);
+}
+
 // Globala
 body {
     font-family: "Poppins", sans-serif;
