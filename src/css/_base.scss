@@ -55,7 +55,16 @@ body.dark nav a.active{
 }
 
 //Logotype
+.logo-white {
+    display: none;
+}
 
+body.dark .logo-white {
+    display: inline;
+}
+body.dark .logo-green {
+    display: none;
+}
 
 // Buttons 
 .btn {
