@@ -1,5 +1,22 @@
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap';
 
+// Ljust tema 
+$light-theme: (
+    font:#000000,
+    background:#FFFFFF,
+    accent:#2F5E3A,
+    border:#B4B4B4
+);
+
+// Mörkt tema
+$dark-theme: (
+    font:#FFFFFF,
+    background:#303030,
+    accent:#D7552B,
+    border:#B4B4B4
+);
+
+// Globala
 body {
     font-family: "Poppins", sans-serif;
 }
