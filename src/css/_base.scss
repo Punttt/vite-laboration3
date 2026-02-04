@@ -30,19 +30,31 @@ body {
     color: theme($light-theme,font );
 }
 
+// dark theme
 body.dark {
     background-color: theme($dark-theme,background );
     color: theme($dark-theme,font );
 }
 
+// anchor tags 
+a {
+    color: theme($light-theme,font);
+}
+a:hover {
+    opacity: 0.7;
+}
+// dark theme 
+body.dark a{
+    color: theme($dark-theme,font );
+}
 // Buttons 
-
 .btn {
     background-color: theme($light-theme, accent);
     color: #FFFFFF;
 }
 
-.btn.dark {
+// dark theme 
+body.dark .btn {
     background-color: theme($dark-theme, accent);
     color: #FFFFFF;
 }

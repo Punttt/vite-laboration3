@@ -10,6 +10,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding: 0 0 0.5rem;
 }
 
 header nav {
@@ -28,4 +29,11 @@ header nav {
         text-decoration: none;
         padding: 1rem 0.5rem;
     }
+}
+
+// Settings footer 
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
