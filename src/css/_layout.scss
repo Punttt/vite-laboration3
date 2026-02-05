@@ -4,6 +4,16 @@
     margin: 0 auto;
 }
 
+.container-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100dvh - 100px);
+    background: url("/images/backgrounds/bg-desktop.webp");
+    background-size: cover;
+}
+
 // Settings för Header 
 header .container {
     display: flex;
