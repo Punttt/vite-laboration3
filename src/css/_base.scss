@@ -39,6 +39,7 @@ body.dark {
 // anchor tags 
 nav a {
     color: theme($light-theme, font);
+    font-weight: 600;
 }
 nav a.active {
     color: theme($light-theme, accent);
@@ -46,6 +47,7 @@ nav a.active {
 nav a:hover {
     opacity: 0.7;
 }
+
 // dark theme 
 body.dark nav a{
     color: theme($dark-theme, font);
