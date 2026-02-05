@@ -45,6 +45,17 @@ body.dark {
     color: theme($dark-theme, font);
 }
 
+// mobile menu 
+.mobile-nav{
+    @extend body;
+}
+
+body.dark .mobile-nav{
+    background-color: theme($dark-theme, background);
+    color: theme($dark-theme, font);
+}
+
+// icons
 i{
     color: theme($light-theme,accent );
     font-size: 2rem;
