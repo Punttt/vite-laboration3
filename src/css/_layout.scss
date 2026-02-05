@@ -63,6 +63,10 @@ header .container {
     align-items: center;
     height: 100px;
     padding: 0 1rem;
+
+    i{
+        display: none;
+    }
 }
 
 header nav {
@@ -100,14 +104,15 @@ footer .container {
 
 // Header navigering 
 @media (max-width: 730px){
-    header nav{
-        display: none;
-    }
-    header .btn {
-        display: none;
-    }
-
-    header .hamburger {
-        display: block;
+    header .container {
+        nav{
+            display: none;
+        }
+        button{
+            display: none;
+        }
+        i{
+            display: block;
+        }
     }
 }

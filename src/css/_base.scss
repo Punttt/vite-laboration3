@@ -45,6 +45,15 @@ body.dark {
     color: theme($dark-theme, font);
 }
 
+i{
+    color: theme($light-theme,accent );
+    font-size: 2rem;
+}
+
+// dark theme
+body.dark i {
+    color: theme($dark-theme,accent );
+}
 // anchor tags 
 nav a {
     color: theme($light-theme, font);
