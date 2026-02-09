@@ -44,14 +44,8 @@ body {
     font-family: "Poppins", sans-serif;
     line-height: 1.5;
 
-    background-color: theme($light-theme, background);
-    color: theme($light-theme,font );
-}
-
-// dark theme
-body.dark {
-    background-color: theme($dark-theme, background);
-    color: theme($dark-theme, font);
+    background-color: $bg-color;
+    color: $font-color;
 }
 
 // mobile menu 
