@@ -2,14 +2,23 @@
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap';
 
 
-// Ljust tema 
+
 $light-theme: (
     font:#000000,
     background:#FFFFFF,
     accent:#2F5E3A
 );
+// Ljust tema 
+$font-color: #000000;
+$bg-color: #FFFFFF;
+$accent-color: #2F5E3A;
 
 // Mörkt tema
+$font-dark-color: #FFFFFF;
+$bg-dark-color: #303030;
+$accent-dark-color: #D7552B;
+
+
 $dark-theme: (
     font:#FFFFFF,
     background:#303030,
