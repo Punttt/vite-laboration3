@@ -53,40 +53,23 @@ body {
     @extend body;
 }
 
-body.dark .mobile-nav{
-    background-color: theme($dark-theme, background);
-    color: theme($dark-theme, font);
-}
-
 // icons
 i{
-    color: theme($light-theme,accent );
+    color: $accent-color;
     font-size: 2rem;
     cursor: pointer;
 }
 
-// dark theme
-body.dark i {
-    color: theme($dark-theme,accent );
-}
 // anchor tags 
 nav a {
-    color: theme($light-theme, font);
+    color: $font-color;
     font-weight: 600;
 }
 nav a.active {
-    color: theme($light-theme, accent);
+    color: $accent-color;
 }
 nav a:hover {
     opacity: 0.7;
-}
-
-// dark theme 
-body.dark nav a{
-    color: theme($dark-theme, font);
-}
-body.dark nav a.active{
-    color: theme($dark-theme, accent);
 }
 
 //Logotype
@@ -103,13 +86,7 @@ body.dark .logo-green {
 
 // Buttons 
 .btn {
-    background-color: theme($light-theme, accent);
-    color: #FFFFFF;
-}
-
-// dark theme 
-body.dark .btn {
-    background-color: theme($dark-theme, accent);
+    background-color: $accent-color;
     color: #FFFFFF;
 }
 
@@ -120,4 +97,25 @@ header {
 }
 footer {
     border-top: 1px solid $border-color;
+}
+
+
+@media (prefers-color-scheme: dark){
+    body{
+        background: $bg-dark-color;
+        color: $font-dark-color;
+    }
+    .mobile-nav{
+        background: $bg-dark-color;
+        color: $font-dark-color;
+    }
+    nav a{
+    color: $font-dark-color;
+    }   
+    nav a.active{
+    color: $accent-dark-color;
+    }   
+    .btn {
+    background-color: $accent-dark-color;}
+
 }
