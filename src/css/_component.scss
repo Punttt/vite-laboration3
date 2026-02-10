@@ -1,16 +1,22 @@
 @use "base";
+$rounded-buttons: false;
 
 // Knappar
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
     border: none;
     text-align: center;
     font-family: inherit;
     cursor: pointer;
     color: #fff;
     background-color: base.$accent-color;
+
+    @if $rounded-buttons{
+        border-radius: 50px;
+    } @else{
+        border-radius: 5px;
+    }
 }
 
 .btn:hover {
