@@ -4,7 +4,7 @@
 // Ljust tema 
 $font-color: #000000;
 $bg-color: #FFFFFF;
-$accent-color: #2F5E3A;
+$accent-color: #2F5E3A; 
 
 // Mörkt tema
 $font-dark-color: #FFFFFF;
@@ -27,76 +27,4 @@ body {
 
     background-color: $bg-color;
     color: $font-color;
-}
-
-// mobile menu 
-.mobile-nav{
-    @extend body;
-}
-
-// icons
-i{
-    color: $accent-color;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-// anchor tags 
-nav a {
-    color: $font-color;
-    font-weight: 600;
-}
-nav a.active {
-    color: $accent-color;
-}
-nav a:hover {
-    opacity: 0.7;
-}
-
-//Logotype
-.logo-white {
-    display: none;
-}
-
-body.dark .logo-white {
-    display: inline;
-}
-body.dark .logo-green {
-    display: none;
-}
-
-// Buttons 
-.btn {
-    background-color: $accent-color;
-    color: #FFFFFF;
-}
-
-// Borders
-
-header {
-    border-bottom: 1px solid $border-color;
-}
-footer {
-    border-top: 1px solid $border-color;
-}
-
-
-@media (prefers-color-scheme: dark){
-    body{
-        background: $bg-dark-color;
-        color: $font-dark-color;
-    }
-    .mobile-nav{
-        background: $bg-dark-color;
-        color: $font-dark-color;
-    }
-    nav a{
-    color: $font-dark-color;
-    }   
-    nav a.active{
-    color: $accent-dark-color;
-    }   
-    .btn {
-    background-color: $accent-dark-color;}
-
 }
