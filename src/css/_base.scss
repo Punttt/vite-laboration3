@@ -1,13 +1,6 @@
 @use "sass:map";
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap';
 
-
-
-$light-theme: (
-    font:#000000,
-    background:#FFFFFF,
-    accent:#2F5E3A
-);
 // Ljust tema 
 $font-color: #000000;
 $bg-color: #FFFFFF;
@@ -18,20 +11,8 @@ $font-dark-color: #FFFFFF;
 $bg-dark-color: #303030;
 $accent-dark-color: #D7552B;
 
-
-$dark-theme: (
-    font:#FFFFFF,
-    background:#303030,
-    accent:#D7552B
-);
-
 // Färg borders
 $border-color: #B4B4B4;
-
-// Tema funktion
-@function theme($theme, $key){
-    @return map-get($theme, $key);
-}
 
 // Globala
 * {
