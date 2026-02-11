@@ -65,6 +65,9 @@
     h1{
         margin-bottom: 1rem;
     }
+    h2{
+        margin-bottom: 0.5rem;
+    }
     img {
         margin-bottom: 0.5rem;
         width: 100%;
@@ -72,6 +75,14 @@
     }
     p{
         margin-bottom: 1rem;
+    }
+    ul {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+
+        li{
+            margin-bottom: 0.25rem;
+        }
     }
 }
 
