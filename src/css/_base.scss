@@ -1,0 +1,30 @@
+@use "sass:map";
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap';
+
+// Ljust tema 
+$font-color: #000000;
+$bg-color: #FFFFFF;
+$accent-color: #2F5E3A; 
+
+// Mörkt tema
+$font-dark-color: #FFFFFF;
+$bg-dark-color: #303030;
+$accent-dark-color: #D7552B;
+
+// Färg borders
+$border-color: #B4B4B4;
+
+// Globala
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+
+    background-color: $bg-color;
+    color: $font-color;
+}
