@@ -1,0 +1,89 @@
+@use "base";
+$rounded-buttons: false;
+
+// Knappar
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    text-align: center;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    background-color: base.$accent-color;
+
+    @if $rounded-buttons{
+        border-radius: 50px;
+    } @else{
+        border-radius: 5px;
+    }
+}
+
+.btn:hover {
+    @extend .btn;
+    opacity: 0.7;
+}
+
+// Ikoner
+i{
+    color: base.$accent-color;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+// Navigering 
+nav a {
+    color: base.$font-color;
+    font-weight: 600;
+}
+nav a.active {
+    color: base.$accent-color;
+}
+nav a:hover {
+    opacity: 0.7;
+}
+
+// Logotyper
+.logo-white {
+    display: none;
+}
+
+body.dark .logo-white {
+    display: inline;
+}
+body.dark .logo-green {
+    display: none;
+}
+
+// Borders
+//Header
+header {
+    border-bottom: 1px solid base.$border-color;
+}
+//Footer
+footer {
+    border-top: 1px solid base.$border-color;
+}
+
+
+// Media queries
+// Tema - Dark
+@media (prefers-color-scheme: dark){
+    body{
+        background: base.$bg-dark-color;
+        color: base.$font-dark-color;
+    }
+    .mobile-nav{
+        background: lighten(base.$bg-dark-color, 5%);
+        color: base.$font-dark-color;
+    }
+    nav a{
+    color: base.$font-dark-color;
+    }   
+    nav a.active{
+    color: base.$accent-dark-color;
+    }   
+    .btn {
+    background-color: base.$accent-dark-color;}
+
+}

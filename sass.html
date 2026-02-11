@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite-laboration3</title>
+    <link rel="stylesheet" href="/src/css/main.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="/images/logotype-green.svg" class="logo-green" alt="logotyp-green">
+        <img src="/images/logotype-white.svg" class="logo-white" alt="logotyp-white">
+        <nav>
+          <ul>
+            <li><a href="/" >Startsida</a></li>
+            <li><a href="/sass" class="active" >SASS</a></li>
+            <li><a href="/">Tjänster</a></li>
+            <li><a href="/">Kontakt</a></li>
+            <li><a href="/">Om oss</a></li>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
+      </div>
+    </header>
+    <nav class="mobile-nav">
+      <div class="menu-wrap">
+        <p>Meny</p>
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+      </div>
+      <ul>
+        <li><a href="/" >Startsida</a></li>
+        <li><a href="/sass" class="active" >SASS</a></li>
+        <li><a href="/">Tjänster</a></li>
+        <li><a href="/">Kontakt</a></li>
+        <li><a href="/">Om oss</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div class="container-text">
+          <h1>SCSS</h1>
+          <img src="/images/picture1.webp" alt="bild på telefon och en bok om css">
+          <p>Att arbeta med SASS har varit lärorikt men svårt. I början kändes det som att det var mycket att tänka på med alla partials och strukturer. Men jag tyckte ändå att man kom in i ett workflow relativt snabb och insåg vikten med SASS-funktionerna.</p>
+          
+          <h2>Fördelar</h2>
+          <p>Det finns flera fördelar som jag upplevde under uppgiften:</p>
+          <ul>
+            <li>Bättre struktur med hjälp av partials.</li>
+            <li>Variabler för färger vilket spara tid, samt gör det mycket enkelt om man vill ändra färgschema.</li>
+            <li>Mixins och extend för att minska repition. Gjorde det möjligt att återanvända redan skriven kod istället för att repitera hela tiden.</li>
+            <li>Nesting gjorde att strukturen av koden kändes mer logisk samt att man undeviker onödig redundans.</li>
+            <li>Funkctions för exempelvis Color funtions för att göra justering av färger man använder. Så att man håller sig inom samma färgspektrum och håller sig till en ren och snygg design.</li>
+          </ul>
+
+          <h2>Nackdelar</h2>
+          <p>Det finns också några utmaningar:</p>
+          <ul>
+            <li>Import ordningen är viktig. Jag märkte det då jag råkade lägga design för mobilmenyn i fel Partial vilket resulterade att designen inte prioriterades.</li>
+            <li>If/else är statiskt, jag  insåg att SASS inte arbetar dynamiskt som JS. Det körs vid kompilering och inte i webbläsaren. Först tänkte jag som när man gör JS funktioner men insåg att man måste tänka annorlunda med logiken.</li>
+            <li>Strukturen kan bli rörig om man inte planerar, jag ser verkligen fördelarna med partials. Men nackdelen jag insåg nu med första uppgiften var att jag skrev myvket kod utan att tänka vart den skulle vara. Detta resulterade att det tog lite längre tid.</li>
+          </ul>
+
+          <h2>Hur jag kom igång</h2>
+          <p>Att komma igång med SASS var lite ovant i början, särskilt med partials och @Use. Men när jag väl förstod hur partials, mixins och variabler hänger ihop så blev det enklare. Men fördelarna strukturen och alla funktioner som SASS har med sig är väldigt starkt och är något jag kommer arbeta vidare med.</p>
+          <p>När jag väl kom in i det kändes det faktiskt roligt att skriva SASS istället för vanlig CSS. Det var kul att programmera fram sin igen design, men man har mycket att lära.</p>
+        </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          &copy; Pontus Johansson, 2026
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
