@@ -137,9 +137,11 @@
         .box{
             width: 150px;
             min-height: 100px;
+            transition: opacity 0.5s ease-in-out;
         }
         .box:hover{
             cursor: pointer;
+            opacity: 0.4;
         }
         #b1{
             background-color: tomato;
