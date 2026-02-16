@@ -47,12 +47,8 @@ nav a:hover {
 .logo-white {
     display: none;
 }
-
-body.dark .logo-white {
+.logo-green {
     display: inline;
-}
-body.dark .logo-green {
-    display: none;
 }
 
 // Borders
@@ -85,5 +81,14 @@ footer {
     }   
     .btn {
     background-color: base.$accent-dark-color;}
+    .logo-white{
+        display: inline;
+    }
+    .logo-green{
+        display: none;
+    }
+    i{
+        color: base.$accent-dark-color;
+    }
 
 }
