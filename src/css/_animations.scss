@@ -1,0 +1,17 @@
+@keyframes fullWidth {
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes pulseColor {
+    25%{
+        color: tomato;
+    }
+    50%{
+        color: rgb(71, 102, 255);
+    }
+    75%{
+        color: rgb(71, 255, 117);
+    }
+}
