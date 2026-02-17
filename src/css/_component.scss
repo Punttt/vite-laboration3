@@ -11,6 +11,7 @@ $rounded-buttons: false;
     cursor: pointer;
     color: #fff;
     background-color: base.$accent-color;
+    transition: transform 3s ease;
 
     @if $rounded-buttons{
         border-radius: 50px;
@@ -22,6 +23,7 @@ $rounded-buttons: false;
 .btn:hover {
     @extend .btn;
     opacity: 0.7;
+    transform: scale(1.4);
 }
 
 // Ikoner
