@@ -11,6 +11,7 @@ $rounded-buttons: false;
     cursor: pointer;
     color: #fff;
     background-color: base.$accent-color;
+    transition: transform 3s ease;
 
     @if $rounded-buttons{
         border-radius: 50px;
@@ -22,6 +23,7 @@ $rounded-buttons: false;
 .btn:hover {
     @extend .btn;
     opacity: 0.7;
+    transform: scale(1.4);
 }
 
 // Ikoner
@@ -47,12 +49,8 @@ nav a:hover {
 .logo-white {
     display: none;
 }
-
-body.dark .logo-white {
+.logo-green {
     display: inline;
-}
-body.dark .logo-green {
-    display: none;
 }
 
 // Borders
@@ -85,5 +83,14 @@ footer {
     }   
     .btn {
     background-color: base.$accent-dark-color;}
+    .logo-white{
+        display: inline;
+    }
+    .logo-green{
+        display: none;
+    }
+    i{
+        color: base.$accent-dark-color;
+    }
 
 }
