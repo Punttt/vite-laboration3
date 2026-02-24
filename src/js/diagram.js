@@ -12,8 +12,10 @@ async function loadData() {
         
 
         const toppKurser = getTopByType(antagningsInfo, "Kurs", 6);
-
         console.table(toppKurser);
+
+        const toppProgram = getTopByType(antagningsInfo, "Program", 5);
+        console.table(toppProgram);
 
     } catch(error){
         console.error("fel:", error);
@@ -21,6 +23,9 @@ async function loadData() {
 }
 
 
+/**
+ * Sortera i fallande ordning för sökanden och returnera värdet
+ */
 function getTopByType(antagning, type, count){
     return antagning 
         .filter(item => item.type && item.type.toLowerCase() == type.toLowerCase())
