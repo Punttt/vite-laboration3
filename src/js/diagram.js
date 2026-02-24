@@ -9,9 +9,11 @@ async function loadData() {
         const response = await fetch(url);
         const antagningsInfo = await response.json();
 
-        console.table(antagningsInfo);
+        
 
         const toppKurser = getTopByType(antagningsInfo, "Kurs", 6);
+
+        console.table(toppKurser);
 
     } catch(error){
         console.error("fel:", error);
@@ -20,5 +22,8 @@ async function loadData() {
 
 
 function getTopByType(antagning, type, count){
-    
+    return antagning 
+        .filter(item => item.type && item.type.toLowerCase() == type.toLowerCase())
+        .sort((a, b) => Number(b.applicantsTotal) - Number(a.applicantsTotal))
+        .slice(0, count);
 }
