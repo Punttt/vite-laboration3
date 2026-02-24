@@ -7,11 +7,18 @@ async function loadData() {
 
     try {
         const response = await fetch(url);
-        const program = await response.json();
+        const antagningsInfo = await response.json();
 
-        console.table(program);
+        console.table(antagningsInfo);
+
+        const toppKurser = getTopByType(antagningsInfo, "Kurs", 6);
 
     } catch(error){
         console.error("fel:", error);
     }
+}
+
+
+function getTopByType(antagning, type, count){
+    
 }
