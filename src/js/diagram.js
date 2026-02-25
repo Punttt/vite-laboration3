@@ -29,7 +29,7 @@ async function loadData() {
             data: {
                 labels: kurserLabels,
                 datasets: [{
-                    label: "Totalt antal sökande (kurser)",
+                    label: "Totalt antal sökande",
                     data: kurserData
                 }]
             }
@@ -41,7 +41,7 @@ async function loadData() {
             data: {
                 labels: programLabels,
                 datasets: [{
-                    label: "Totalt antal sökande (program)",
+                    label: "Totalt antal sökande",
                     data: programData,
                     backgroundColor: [
                         "rgba(255, 99, 132, 0.7)",
