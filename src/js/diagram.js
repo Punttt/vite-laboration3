@@ -1,3 +1,5 @@
+import Chart from "chart.js/auto";
+
 document.addEventListener("DOMContentLoaded", async()=>{
     loadData();
 })
@@ -25,7 +27,21 @@ async function loadData() {
         console.table(programData);
 
         // Skapa diagram
+        new Chart(document.getElementById("chartKurser"),{
+            type: "bar",
+            data: {
+                labels: kurserLabels,
+                dataset: [{
+                    labels: "Totalt antal sökande (kurser)",
+                    data: kurserData
+                }]
+            }
+        });
 
+        /** 
+        new chart(document.getElementById("chartProgram"),{
+
+        })*/
 
     } catch(error){
         console.error("fel:", error);
