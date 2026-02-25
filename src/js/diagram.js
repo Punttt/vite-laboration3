@@ -23,25 +23,38 @@ async function loadData() {
         const programLabels = toppProgram.map(item => item.name);
         const programData = toppProgram.map(item => item.applicantsTotal);
 
-        console.table(programLabels);
-        console.table(programData);
-
-        // Skapa diagram
+        // Skapa diagram stapel för kurser
         new Chart(document.getElementById("chartKurser"),{
             type: "bar",
             data: {
                 labels: kurserLabels,
-                dataset: [{
-                    labels: "Totalt antal sökande (kurser)",
+                datasets: [{
+                    label: "Totalt antal sökande (kurser)",
                     data: kurserData
                 }]
             }
         });
 
-        /** 
-        new chart(document.getElementById("chartProgram"),{
+        // Skapa diagram cirkel för program
+        new Chart(document.getElementById("chartProgram"),{
+            type: "pie",
+            data: {
+                labels: programLabels,
+                datasets: [{
+                    label: "Totalt antal sökande (program)",
+                    data: programData,
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.7)",
+                        "rgba(54, 162, 235, 0.7)",
+                        "rgba(255, 206, 86, 0.7)",
+                        "rgba(75, 192, 192, 0.7)",
+                        "rgba(153, 102, 255, 0.7)"
 
-        })*/
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        })
 
     } catch(error){
         console.error("fel:", error);
