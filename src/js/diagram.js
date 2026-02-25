@@ -9,11 +9,22 @@ async function loadData() {
         const response = await fetch(url);
         const antagningsInfo = await response.json();
 
+        // Filtrera och sortera
         const toppKurser = getTopByType(antagningsInfo, "Kurs", 6);
         const toppProgram = getTopByType(antagningsInfo, "Program", 5);
 
-        console.table(toppProgram);
-        console.table(toppKurser);
+        // Skapa labels och data (Kurser)
+        const kurserLabels = toppKurser.map(item => item.name);
+        const kurserData = toppKurser.map(item => item.applicantsTotal);
+
+        // Skapa labels och data (Kurser)
+        const programLabels = toppProgram.map(item => item.name);
+        const programData = toppProgram.map(item => item.applicantsTotal);
+
+        console.table(programLabels);
+        console.table(programData);
+
+        // Skapa diagram
 
 
     } catch(error){
