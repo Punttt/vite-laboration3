@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 // Hämta kordinater från Nominatim
 async function searchLocation(query){
-    const url = `https://nominatim.openstreetmap.org/search?q=${query}&format=json`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(query)}&key=AIzaSyC4Gx-KoIj3bIpmEd9Q9AkETl8ZJxRVzAI`;
     let data;
 
     try {  
@@ -29,8 +29,8 @@ async function searchLocation(query){
     } catch (error){
         console.error(error);
     }
-    
-
-    console.log(data[0].lat);
-    console.log(data[0].lon);
 }
+
+// 
+
+// `https://nominatim.openstreetmap.org/search?q=${query}&format=json`;
