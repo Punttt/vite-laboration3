@@ -1,3 +1,5 @@
+let lat = 0;
+let lng = 0;
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         const query = input.value;
         console.log(query);
 
-        searchLocation(query);
+        await searchLocation(query);
     })
 })
 
@@ -24,13 +26,18 @@ async function searchLocation(query){
         const response = await fetch(url);
         data = await response.json();
 
-        console.table(data);
+        if(data.status != "OK"){
+            console.error(data.error_message);
+            return;
+        }
+
+        // testar skriva ut lat och lon
+        lat = data.results[0].geometry.location.lat;
+        lng = data.results[0].geometry.location.lng;
+
+        console.log(`Lat: ${lat}, Lng: ${lng}`);
 
     } catch (error){
         console.error(error);
     }
 }
-
-// 
-
-// `https://nominatim.openstreetmap.org/search?q=${query}&format=json`;
