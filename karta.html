@@ -40,6 +40,16 @@
     </nav>
 
     <main>
+      <div class="container-karta">
+        <h1>Karta</h1>
+
+        <form id="locationForm">
+          <input type="text" id="locationInput" placeholder="Sök plats..." required>
+          <button type="submit" class="btn">Sök</button>
+        </form>
+
+        <div id="map"></div>
+      </div>
     </main>
 
     <footer>
@@ -50,5 +60,6 @@
       </div>
     </footer>
     <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/map.js"></script>
   </body>
 </html>

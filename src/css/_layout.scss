@@ -176,6 +176,27 @@
     }
 }
 
+// Karta - Sida
+.container-karta{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        margin-right: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    #map{
+        width: 100%;
+        height: auto;
+    }
+}
+
 // Settings för Header 
 header .container {
     display: flex;
