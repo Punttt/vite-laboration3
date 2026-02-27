@@ -17,13 +17,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 // Hämta kordinater från Nominatim
 async function searchLocation(query){
-    const url = `https://corsproxy.io/?https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&addressdetails=1&limit=1&polygon_geojson=0`;
-    const response = await fetch(url);
-    const data = await response.json();
+    const url = `https://nominatim.openstreetmap.org/search?q=${query}&format=json`;
+    let data;
 
-    if(data.length === 0){
-        throw new Error("Ingen plats hittades."); 
+    try {  
+        const response = await fetch(url);
+        data = await response.json();
+
+        console.table(data);
+
+    } catch (error){
+        console.error(error);
     }
+    
 
     console.log(data[0].lat);
     console.log(data[0].lon);
