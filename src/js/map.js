@@ -104,3 +104,5 @@ async function searchLocation(query){
         console.error(error);
     }
 }
+
+window.initMap = initMap;
