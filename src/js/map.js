@@ -1,9 +1,28 @@
+/** @type {google.maps.Map} */
 let map;
+
+/** @type {google.maps.Marker} */
 let marker;
+
+/**
+ * Startlatitud för kartan
+ * 
+ * @type {number}
+ */
 let lat = 62.3908;
+
+/**
+ * Startlongitud för kartan
+ * 
+ * @type {number}
+ */
 let lng = 17.3069;
 
-// Initierar kartan.
+
+/**
+ * Initierar kartan och placerar den på startkoordinaterna.
+ * Körs automatiskt av Google API via initMap.
+ */
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: lat, lng: lng },
@@ -11,7 +30,13 @@ function initMap() {
     });
 }
 
-//Renderar kartan
+/**
+ * Uppdaterar den befintliga kartan med en position och pin/marker
+ * Tar bort tidigare mark om det finns kvar
+ * 
+ * @param {number} lat - Latitud  för den nya positionen
+ * @param {number} lng - Longitud för den nya positionen
+ */
 function updateMap(){
     const pos = { lat, lng };
 
@@ -27,6 +52,12 @@ function updateMap(){
 
 }
 
+/**
+ * Initierar eventlyssnare när DOM är färdigladdat
+ * Hämtat formulär och inputelement och lyssnar på submit händelser.
+ * Vid Submit hämtar användarens söksträng, koordinater slås ihop med searchLocation()
+ * Sedan uppdateras kartan med updateMap()
+ */
 document.addEventListener("DOMContentLoaded", ()=>{
 
     const form = document.getElementById("locationForm");
@@ -44,7 +75,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 })
 
 
-// Hämta kordinater från google API
+/**
+ * Hämtar koordinater från Google Geocoding API baserat på en söksträng 
+ * 
+ * @async
+ * @param {string} query - Den plats som användaren söker efter
+ * @returns {Promise<void>}
+ */
 async function searchLocation(query){
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(query)}&key=AIzaSyC4Gx-KoIj3bIpmEd9Q9AkETl8ZJxRVzAI`;
     let data;
