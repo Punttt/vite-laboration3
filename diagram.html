@@ -17,8 +17,8 @@
           <ul>
             <li><a href="/">Startsida</a></li>
             <li><a href="/sass">SASS</a></li>
-            <li><a href="/animering" class="active">Animering</a></li>
-            <li><a href="/diagram">Diagram</a></li>
+            <li><a href="/animering">Animering</a></li>
+            <li><a href="/diagram" class="active">Diagram</a></li>
             <li><a href="/karta">Karta</a></li>
           </ul>
         </nav>
@@ -33,21 +33,22 @@
       <ul>
         <li><a href="/">Startsida</a></li>
         <li><a href="/sass">SASS</a></li>
-        <li><a href="/animering" class="active">Animering</a></li>
-        <li><a href="/diagram">Diagram</a></li>
+        <li><a href="/animering">Animering</a></li>
+        <li><a href="/diagram" class="active">Diagram</a></li>
         <li><a href="/karta">Karta</a></li>
       </ul>
     </nav>
 
     <main>
-      <div class="container-animering">
-        <h1>Animering</h1>
-        
-        <div class="boxes">
-          <div class="box" id="b1"></div>
-          <div class="box" id="b2"></div>
-          <div class="box" id="b3"></div>
-        </div>
+      <div class="container-diagram">
+        <h1>Diagram</h1>
+        <h2>Ansökande för kurser</h2>
+        <!-- Stapeldiagram som visar de mest sökta kurserna HT25 -->
+        <canvas id="chartKurser"></canvas>
+
+        <h2>Ansökande för program</h2>
+        <!-- Cirkeldiagram som visar de mest sökta programmen HT25 -->
+        <canvas id="chartProgram"></canvas>
       </div>
     </main>
 
@@ -60,5 +61,6 @@
       </div>
     </footer>
     <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/diagram.js"></script>
   </body>
 </html>

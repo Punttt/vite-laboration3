@@ -158,6 +158,47 @@
     }
 }
 
+//Diagram - sida
+.container-diagram{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    h1{
+        margin-bottom: 1rem;
+    }
+    h2{
+        margin-bottom: 0.5rem;
+    }
+
+    canvas {
+        margin-bottom: 2rem;
+    }
+}
+
+// Karta - Sida
+.container-karta{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        margin-right: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    #map{
+        width: 100%;
+        background: grey;
+        margin: 1rem 0;
+        height: 400px;
+    }
+}
+
 // Settings för Header 
 header .container {
     display: flex;
@@ -190,6 +231,8 @@ header nav {
 // Settings footer 
 footer .container {
     display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 100px;
