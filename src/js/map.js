@@ -11,6 +11,15 @@ function initMap() {
     });
 }
 
+//Renderar kartan
+function renderMap(){
+    const pos = { lat, lng };
+
+    map.setCenter(pos);
+    map.setZoom(12);
+
+}
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
     const form = document.getElementById("locationForm");
@@ -23,6 +32,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         console.log(query);
 
         await searchLocation(query);
+        renderMap();
     })
 })
 
