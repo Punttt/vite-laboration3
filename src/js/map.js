@@ -12,11 +12,18 @@ function initMap() {
 }
 
 //Renderar kartan
-function renderMap(){
+function updateMap(){
     const pos = { lat, lng };
 
     map.setCenter(pos);
     map.setZoom(12);
+
+    if(marker) marker.setMap(null);
+
+    marker = new google.maps.Marker({
+        position: pos,
+        map: map
+    });
 
 }
 
@@ -32,7 +39,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         console.log(query);
 
         await searchLocation(query);
-        renderMap();
+        updateMap();
     })
 })
 
