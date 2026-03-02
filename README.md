@@ -28,10 +28,28 @@ Animering som visas är:
 
 Bonus: På startsidan lades en extra animation till för knappen som finns i hero-delen. Med hjälp av transform och scale(1.2) blev det en extra effekt vid hover över knappen som skapade en mer proffsigt intryck.
 
+Undersida (Diagram): På denna sida visualiseras data från en extern JSon-fil med hjälp av två diagramtyper. Syftet var att filtrera och presentera data för de 5 mest sökta programmen och kurser. Detta skulle presenteras med ett cirkel diagram och ett stapeldiagram.
+Funktionalitet: 
+- Hämtning av JSON-data med fetch
+- filtrering och sortering av datasetet innan utskrift
+- två diagram skapade med Charts.js
+
+Undersida (Kartor): På denna sida finns en interaktiv karta där användaren kan söka efter valfri plats. Så uppdateras kartan till den angivna platsen med en marker.
+Funktionalitet:
+- Eget sökformulär med hjälp av HTML och JS
+- AJAX-anrop till google API (Geocoding och javascript)
+   - Geocoding används för att med sökordet ta reda på koordinaterna för orten.
+   - Med de nya koordinaterna renderas kartan på sidan om till den nya platsen.
+- Felhantering om platsen inte hittas
+- dokummenterad js kod med JSdoc
+
+Dokumentation JSDoc: Projektet innehåller JSdoc-dokumentation för att JS kod. Dokumentationen är publicerad statiskt separat, med en länk från webbsidan footer.
+Publicerad JsDocs: https://docs-vite-lab5.netlify.app/
 
 
 Installation: npm install npm run dev
 
 Bygg projektet: npm run build
 
-Publicerad webbplats: https://vite-lab3.netlify.app/
+Publicerad webbplats: https://vite-lab5.netlify.app/
+
